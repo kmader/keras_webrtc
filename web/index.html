@@ -1,0 +1,97 @@
+<!--
+Copyright 2018 Google LLC. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================
+-->
+
+<!doctype html>
+
+<head>
+  <title>TFJS for Skin Cancer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tfjs-examples.css" />
+</head>
+
+<style>
+  .pred-container {
+    margin-bottom: 20px;
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+
+  .row {
+    display: table-row;
+  }
+  .cell {
+    display: table-cell;
+    padding-right: 20px;
+  }
+
+  #file-container {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="tfjs-example-container">
+    <section class='title-area'>
+      <h1>Using a Skin Lesion Model: TFJS</h1>
+    </section>
+
+    <section>
+      <p class='section-head'>Description</p>
+      <p> <bold> This is not a certified medical product and is just for fun! </bold></p>
+      <p>
+        This demo uses a fine-tuned version of MobileNet in order to classify skin images into 7 different categories:
+      </p>
+
+      <h4> melanocytic nevi
+      <h4> melanoma
+      <p> basal cell carcinoma
+      <p> Actinic keratoses and intraepithelial carcinoma
+      <p> vascular lesions
+      <p> benign keratosis-like
+      <p> dermatofibroma
+    </section>
+    <section>
+      <p class='section-head'>Model Location (json description)</p>
+      <div id="model-url"> Enter the path to your model
+        <input type="text" id="model_url" value="https://www.kaggleusercontent.com/kf/27948572/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..HUp7U8QKjQSSYHrxxNFouw.5q6sUlsEuKmyp50CL_wYw7MblWiVenA3kWtoh8AWz-z67jN6qYhl_Eb5HEYhC73_G6VVimikIMln8xTzXv6RNBwKe89FdZ-Tsa7O9Ieb-ZXAV21woiGIP_ttFOW4_vpi-9cL1lovUfUnvBEcR3Wu8Sqr8HgY2uRZXGEe8hrTU8w.s_rr6QLPp2528YZ-yHQRKw/model.json" />
+      </div>
+    </section>
+    <section>
+      <p class='section-head'>Status</p>
+      <div id="status"></div>
+    </section>
+
+    <section>
+      <p class='section-head'>Model Output</p>
+
+      <div id="file-container" style="display: none">
+        Upload an image: <input type="file" id="files" name="files[]" multiple />
+      </div>
+
+      <div id="predictions"></div>
+
+      <img style="display: none" id="skin_image" src="skin.jpg" width=224 height=224 />
+    </section>
+
+    <script src="index.js"></script>
+  </div>
+</body>
