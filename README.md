@@ -1,4 +1,4 @@
-# keras_webrtc [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kmader/keras_webrtc/master?filepath=notebooks)
+# keras_webrtc [![Notebook](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/kmader/keras_webrtc/master?filepath=notebooks) [![Notebook](https://img.shields.io/badge/launch-mobile-app-red.svg)](https://mybinder.org/v2/gh/kmader/keras_webrtc/master?urlpath=%2Fapps%2Fnotebooks%2FDemo.ipynb%3Fuser%3Ddemo)
 
 Use a keras model in the browser using WebRTC
 
