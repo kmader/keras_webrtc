@@ -20,7 +20,10 @@ dependencies:
   - scikit-image
   - pythreejs
   - ipyleaflet
+  - appmode
   - tensorflow
   - keras
   - pip:
     - git+https://github.com/maartenbreddels/ipywebrtc
+    - cloudpickle
+    - fileupload
